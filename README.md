@@ -186,4 +186,4 @@ def delete_resources(resource_group_name, compute_client, network_client, resour
     resource_client.resource_groups.begin_delete(resource_group_name).wait()
 ```
 
-Don't forget to start the repo of you found this uesful!
+Don't forget to star the repo if you found this useful!
