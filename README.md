@@ -138,6 +138,7 @@ def create_virtual_machine(resource_group_name, location, compute_client, networ
 ```
 
 ### Step 6: Call them all
+Set up the Azure API client, calls the create/delete functions in order, and pass the necessary parameters.
 ```python
 if __name__ == "__main__":
     # Set up the Azure API client
@@ -156,6 +157,9 @@ if __name__ == "__main__":
     nic = create_network_interface(resource_group_name, location, subnet, network_client)
     vm = create_virtual_machine(resource_group_name, location, compute_client, network_client, nic)
 ```
+
+You can also check that the resources were created by running: `az resource list --output table`
+
 ### Step 7: delete the resources
 This function deletes the virtual machine, network interface, virtual network, and resource group created in the previous functions using their respective management clients.
 
